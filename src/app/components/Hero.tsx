@@ -52,9 +52,15 @@ export function Hero() {
                   VIEW PORTFOLIO
                 </BracketButton>
               </Link>
-              <BracketButton variant="secondary">
-                DOWNLOAD CV
-              </BracketButton>
+<Link 
+  to="https://drive.google.com/uc?export=download&id=1_LfuArvl7bg96fsNTtASpb49dRF08-Zi"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <BracketButton variant="secondary">
+    DOWNLOAD CV
+  </BracketButton>
+</Link>
             </div>
           </div>
         </motion.div>
