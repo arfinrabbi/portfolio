@@ -21,8 +21,8 @@ const services = [
   },
   {
     icon: Monitor,
-    title: 'Web Design',
-    description: 'Modern, responsive website designs and UI/UX for digital products.'
+    title: 'Web Design (WordPress)',
+    description: 'Modern, responsive Wordpress website designs and UI/UX for digital products.'
   },
   {
     icon: Film,
