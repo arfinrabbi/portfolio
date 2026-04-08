@@ -13,6 +13,7 @@ const tools = [
   { name: 'PowerPoint', abbr: 'PP' },
   { name: 'Trello', abbr: 'Tr' },
   { name: 'Slack', abbr: 'Sl' },
+  { name: 'Artificial Intelligence', abbr: 'AI' },
 ];
 
 export function Tools() {
