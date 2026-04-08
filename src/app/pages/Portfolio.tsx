@@ -8,10 +8,10 @@ import { Link } from 'react-router';
 const projects = [
   {
     id: 1,
-    title: 'Full Branding Showcase',
+    title: 'Branding Showcase [Lemon IoT]',
     category: 'BRAND IDENTITY',
     featured: true,
-    image: 'https://images.unsplash.com/photo-1616205255812-c07c8102cc02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZCUyMGlkZW50aXR5JTIwZGVzaWduJTIwbW9ja3VwfGVufDF8fHx8MTc3NTM5OTkxMnww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'src/Images/sample_mock.png',
     description: 'Complete brand identity system including logo suite, stationery, and brand guidelines'
   },
   {
