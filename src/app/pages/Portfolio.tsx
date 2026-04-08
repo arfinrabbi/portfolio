@@ -256,7 +256,7 @@ export function Portfolio() {
               </p>
               <div className="pt-4">
                 <a
-                  href="https://www.behance.net"
+                  href="https://www.behance.net/arfinrabbi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 font-['Rajdhani'] text-[#E8F4FF] hover:text-[#FF6B1A] transition-colors tracking-wide uppercase text-sm border border-[#FF6B1A] px-8 py-4 bg-[#FF6B1A]/5 hover:bg-[#FF6B1A]/10 hover:shadow-[0_0_20px_rgba(255,107,26,0.3)] relative group"
