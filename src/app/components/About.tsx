@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import arfinImage from '../../Images/Arfin_DP_2port.jpg'; // Move import to the top
 
 const skills = [
   'Brand Identity', 'Logo Design', 'Typography', 'Color Theory',
@@ -30,7 +31,7 @@ export function About() {
               {/* Hexagonal frame effect */}
               <div className="relative w-80 h-80 overflow-hidden" style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)' }}>
                 <ImageWithFallback
-                  import arfinImage from '../../Images/Arfin_DP_2port.jpg';
+                  src={arfinImage} // Use the imported variable here
                   alt="Arfin Rabbi"
                   className="w-full h-full object-cover"
                 />
