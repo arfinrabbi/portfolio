@@ -30,7 +30,7 @@ export function About() {
               {/* Hexagonal frame effect */}
               <div className="relative w-80 h-80 overflow-hidden" style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)' }}>
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1672685667592-0392f458f46f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGhlYWRzaG90fGVufDF8fHx8MTc3NTMyNjg5OXww&ixlib=rb-4.1.0&q=80&w=1080"
+                  src="src/Images/Arfin_DP_2port.webp"
                   alt="Arfin Rabbi"
                   className="w-full h-full object-cover"
                 />
