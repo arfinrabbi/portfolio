@@ -12,7 +12,7 @@ const projects = [
     title: 'Branding Showcase [Lemon IoT]',
     category: 'BRAND IDENTITY',
     featured: true,
-    src: Lemoniot,
+    <img src={Lemoniot} />,
     description: 'Complete brand identity system including logo suite, stationery, and brand guidelines'
   },
   {
