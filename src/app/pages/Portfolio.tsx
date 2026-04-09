@@ -4,6 +4,7 @@ import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { BracketButton } from '../components/BracketButton';
 import { Link } from 'react-router';
+import Lemoniot from '../../Images/sample_mock.png';
 
 const projects = [
   {
@@ -11,7 +12,7 @@ const projects = [
     title: 'Branding Showcase [Lemon IoT]',
     category: 'BRAND IDENTITY',
     featured: true,
-    image: 'src/Images/sample_mock.png',
+    src={arfinImage},
     description: 'Complete brand identity system including logo suite, stationery, and brand guidelines'
   },
   {
