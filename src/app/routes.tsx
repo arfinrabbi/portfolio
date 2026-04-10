@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import { Home } from "./pages/Home";
 import { Portfolio } from "./pages/Portfolio";
-import { Portfolio } from "./pages/DesignProcess";
+import { DesignProcess } from "./pages/DesignProcess";
 
 export const router = createBrowserRouter([
   {
@@ -11,5 +11,9 @@ export const router = createBrowserRouter([
   {
     path: "/portfolio",
     Component: Portfolio,
+  },
+  {
+    path: "/process",
+    Component: DesignProcess,
   },
 ]);
