@@ -16,6 +16,7 @@ export function Navigation() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Process', path: '/process' },
   ];
 
   const handleNavClick = (path: string) => {
