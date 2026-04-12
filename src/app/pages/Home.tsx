@@ -19,7 +19,6 @@ export function Home() {
       <Services />
       <Tools />
       <Timeline />
-      <Contact />
       <Footer />
     </div>
   );
