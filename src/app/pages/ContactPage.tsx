@@ -16,6 +16,7 @@ const socialLinks = [
   { name: 'Behance', url: 'https://behance.net/arfinrabbi', color: '#00C8FF' },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/arfin-rabbi', color: '#00C8FF' },
   { name: 'Facebook', url: 'https://www.facebook.com/nil.vut/', color: '#00C8FF' },
+  { name: 'Instagram', url: 'https://www.instagram.com/arfin_rabbi/', color: '#00C8FF' },
 ];
 
 export function ContactPage() {
