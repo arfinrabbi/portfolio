@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import { Home } from "./pages/Home";
 import { Portfolio } from "./pages/Portfolio";
 import { DesignProcess } from "./pages/DesignProcess";
+import { ContactPage } from "./pages/ContactPage";
 
 export const router = createBrowserRouter([
   {
@@ -15,5 +16,9 @@ export const router = createBrowserRouter([
   {
     path: "/process",
     Component: DesignProcess,
+  },
+  {
+    path: "/contact",
+    Component: ContactPage,
   },
 ]);
