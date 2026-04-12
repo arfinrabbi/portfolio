@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { BracketCard } from '../components/BracketCard';
 import { Mail, Phone, Globe, MapPin, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const contactInfo = [
   { icon: Mail, label: 'EMAIL', value: 'arfinrabbi@email.com', link: 'mailto:arfinrabbi@email.com' },
@@ -18,17 +19,40 @@ const socialLinks = [
 ];
 
 export function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const formRef = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // REPLACE THESE WITH YOUR ACTUAL EMAILJS CREDENTIALS
+  const EMAILJS_SERVICE_ID = 'service_tdzkaln';
+  const EMAILJS_TEMPLATE_ID = 'template_h2aal93';
+  const EMAILJS_PUBLIC_KEY = 'ycYDU_weoihhkC5tM';
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, EMAILJS_PUBLIC_KEY)
+      .then((result) => {
+        console.log('Success:', result.text);
+        setSubmitStatus({ 
+          type: 'success', 
+          message: 'Message sent successfully! I will get back to you soon.' 
+        });
+        formRef.current.reset();
+        setTimeout(() => setSubmitStatus({ type: '', message: '' }), 5000);
+      }, (error) => {
+        console.log('Failed:', error.text);
+        setSubmitStatus({ 
+          type: 'error', 
+          message: 'Failed to send message. Please try again later.' 
+        });
+        setTimeout(() => setSubmitStatus({ type: '', message: '' }), 5000);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -142,7 +166,18 @@ export function ContactPage() {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Status Message */}
+                {submitStatus.message && (
+                  <div className={`mb-6 p-4 border ${
+                    submitStatus.type === 'success' 
+                      ? 'border-green-500 bg-green-500/10 text-green-400' 
+                      : 'border-red-500 bg-red-500/10 text-red-400'
+                  }`}>
+                    <p className="font-['IBM_Plex_Mono'] text-sm">{submitStatus.message}</p>
+                  </div>
+                )}
+
+                <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block font-['IBM_Plex_Mono'] text-[#00C8FF] text-sm mb-2">
@@ -150,10 +185,10 @@ export function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        name="user_name"
                         required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-[#050A12] border border-[#1A3047] px-4 py-3 text-[#E8F4FF] font-['IBM_Plex_Mono'] text-sm focus:border-[#00C8FF] focus:outline-none focus:shadow-[0_0_10px_rgba(0,200,255,0.3)] transition-all"
+                        disabled={isSubmitting}
+                        className="w-full bg-[#050A12] border border-[#1A3047] px-4 py-3 text-[#E8F4FF] font-['IBM_Plex_Mono'] text-sm focus:border-[#00C8FF] focus:outline-none focus:shadow-[0_0_10px_rgba(0,200,255,0.3)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                         placeholder="Your name"
                       />
                     </div>
@@ -164,10 +199,10 @@ export function ContactPage() {
                       </label>
                       <input
                         type="email"
+                        name="user_email"
                         required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-[#050A12] border border-[#1A3047] px-4 py-3 text-[#E8F4FF] font-['IBM_Plex_Mono'] text-sm focus:border-[#00C8FF] focus:outline-none focus:shadow-[0_0_10px_rgba(0,200,255,0.3)] transition-all"
+                        disabled={isSubmitting}
+                        className="w-full bg-[#050A12] border border-[#1A3047] px-4 py-3 text-[#E8F4FF] font-['IBM_Plex_Mono'] text-sm focus:border-[#00C8FF] focus:outline-none focus:shadow-[0_0_10px_rgba(0,200,255,0.3)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -179,10 +214,10 @@ export function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="subject"
                       required
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full bg-[#050A12] border border-[#1A3047] px-4 py-3 text-[#E8F4FF] font-['IBM_Plex_Mono'] text-sm focus:border-[#00C8FF] focus:outline-none focus:shadow-[0_0_10px_rgba(0,200,255,0.3)] transition-all"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#050A12] border border-[#1A3047] px-4 py-3 text-[#E8F4FF] font-['IBM_Plex_Mono'] text-sm focus:border-[#00C8FF] focus:outline-none focus:shadow-[0_0_10px_rgba(0,200,255,0.3)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                       placeholder="What would you like to discuss?"
                     />
                   </div>
@@ -192,23 +227,33 @@ export function ContactPage() {
                       <span className="text-[#00C8FF]">{'>'}</span> MESSAGE *
                     </label>
                     <textarea
+                      name="message"
                       required
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={6}
-                      className="w-full bg-[#050A12] border border-[#1A3047] px-4 py-3 text-[#E8F4FF] font-['IBM_Plex_Mono'] text-sm focus:border-[#00C8FF] focus:outline-none focus:shadow-[0_0_10px_rgba(0,200,255,0.3)] transition-all resize-none"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#050A12] border border-[#1A3047] px-4 py-3 text-[#E8F4FF] font-['IBM_Plex_Mono'] text-sm focus:border-[#00C8FF] focus:outline-none focus:shadow-[0_0_10px_rgba(0,200,255,0.3)] transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                       placeholder="Tell me about your project..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="px-8 py-3 font-['Rajdhani'] font-semibold tracking-wider uppercase transition-all duration-300 relative group bg-[#00C8FF] text-[#050A12] hover:bg-[#00B4E6] shadow-[0_0_20px_rgba(0,200,255,0.4)] w-full md:w-auto min-w-[200px]"
+                    disabled={isSubmitting}
+                    className="px-8 py-3 font-['Rajdhani'] font-semibold tracking-wider uppercase transition-all duration-300 relative group bg-[#00C8FF] text-[#050A12] hover:bg-[#00B4E6] shadow-[0_0_20px_rgba(0,200,255,0.4)] w-full md:w-auto min-w-[200px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#00C8FF]"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       <span className="text-lg">[</span>
-                      <Send className="w-4 h-4" />
-                      SEND MESSAGE
+                      {isSubmitting ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-[#050A12] border-t-transparent rounded-full animate-spin"></div>
+                          SENDING...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          SEND MESSAGE
+                        </>
+                      )}
                       <span className="text-lg">]</span>
                     </span>
                   </button>
