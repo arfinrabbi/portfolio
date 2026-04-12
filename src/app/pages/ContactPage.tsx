@@ -6,17 +6,15 @@ import { BracketCard } from '../components/BracketCard';
 import { Mail, Phone, Globe, MapPin, Send } from 'lucide-react';
 
 const contactInfo = [
-  { icon: Mail, label: 'EMAIL', value: 'arfin.rabbi@email.com', link: 'mailto:arfin.rabbi@email.com' },
-  { icon: Phone, label: 'PHONE', value: '+1 (555) 123-4567', link: 'tel:+15551234567' },
-  { icon: Globe, label: 'PORTFOLIO', value: 'arfinrabbi.design', link: 'https://arfinrabbi.design' },
-  { icon: MapPin, label: 'LOCATION', value: 'New York, USA', link: null },
+  { icon: Mail, label: 'EMAIL', value: 'arfinrabbi@email.com', link: 'mailto:arfinrabbi@email.com' },
+  { icon: Phone, label: 'PHONE', value: '+880 1973 119795', link: 'tel:+8801973119795' },
+  { icon: MapPin, label: 'LOCATION', value: 'Khulna, Bangladesh', link: null },
 ];
 
 const socialLinks = [
   { name: 'Behance', url: 'https://behance.net/arfinrabbi', color: '#00C8FF' },
-  { name: 'Dribbble', url: 'https://dribbble.com/arfinrabbi', color: '#00C8FF' },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/arfinrabbi', color: '#00C8FF' },
-  { name: 'Instagram', url: 'https://instagram.com/arfinrabbi', color: '#FF6B1A' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/arfin-rabbi', color: '#00C8FF' },
+  { name: 'Facebook', url: 'https://www.facebook.com/nil.vut/', color: '#00C8FF' },
 ];
 
 export function ContactPage() {
