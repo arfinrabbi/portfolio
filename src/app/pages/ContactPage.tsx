@@ -8,7 +8,7 @@ import { Mail, Phone, Globe, MapPin, Send } from 'lucide-react';
 const contactInfo = [
   { icon: Mail, label: 'EMAIL', value: 'arfinrabbi@email.com', link: 'mailto:arfinrabbi@email.com' },
   { icon: Phone, label: 'PHONE', value: '+880 1973 119795', link: 'tel:+8801973119795' },
-  { icon: MapPin, label: 'LOCATION', value: 'Khulna, Bangladesh', link: null },
+  { icon: MapPin, label: 'LOCATION', value: 'Khulna, Bangladesh [Remote]', link: null },
 ];
 
 const socialLinks = [
