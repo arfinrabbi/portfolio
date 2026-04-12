@@ -5,6 +5,7 @@ import { Footer } from '../components/Footer';
 import { BracketButton } from '../components/BracketButton';
 import { Link } from 'react-router';
 import Lemoniot from '../../Images/sample_mock.webp';
+import Logo_show from '../../Images/logo_showcase.webp';
 
 const projects = [
   {
@@ -20,7 +21,7 @@ const projects = [
     title: 'Logo Design Collection',
     category: 'LOGO DESIGN',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1761044591996-7a05341a3e12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsb2dvJTIwZGVzaWduJTIwc2hvd2Nhc2V8ZW58MXx8fHwxNzc1Mzk5OTEzfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: Logo_show,
     description: 'Versatile logo designs across various industries and styles'
   },
   {
