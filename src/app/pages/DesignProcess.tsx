@@ -8,12 +8,12 @@ const graphicDesignSteps = [
   {
     title: 'Discovery',
     icon: Lightbulb,
-    description: 'We start by understanding your brand, audience, and goals. This phase involves research, competitor analysis, and gathering all necessary information to set a strong foundation.',
+    description: 'I start by understanding your brand, audience, and goals. This phase involves research, competitor analysis, and gathering all necessary information to set a strong foundation.',
   },
   {
     title: 'Conceptualization',
     icon: Palette,
-    description: 'Creative ideas come to life through sketches and mood boards. We explore multiple design directions and present concepts that align with your vision and brand identity.',
+    description: 'Creative ideas come to life through sketches and mood boards. I explore multiple design directions and present concepts that align with your vision and brand identity.',
   },
   {
     title: 'Execution',
@@ -23,7 +23,7 @@ const graphicDesignSteps = [
   {
     title: 'Delivery',
     icon: Rocket,
-    description: 'Final files are prepared in all necessary formats and delivered with comprehensive guidelines. We ensure you have everything needed for successful implementation across all platforms.',
+    description: 'Final files are prepared in all necessary formats and delivered with comprehensive guidelines. I will ensure you have everything needed for successful implementation across all platforms.',
   },
 ];
 
@@ -31,7 +31,7 @@ const webDevelopmentSteps = [
   {
     title: 'Strategy & Wireframing',
     icon: FileText,
-    description: 'We map out the site structure, user flows, and create wireframes. This blueprint ensures all stakeholders are aligned on functionality and user experience before design begins.',
+    description: 'I map out the site structure, user flows, and create wireframes. This blueprint ensures all stakeholders are aligned on functionality and user experience before design begins.',
   },
   {
     title: 'UI Design',
@@ -41,7 +41,7 @@ const webDevelopmentSteps = [
   {
     title: 'Development',
     icon: Code,
-    description: 'Clean, efficient code transforms designs into a fully functional WordPress website. We build with best practices, ensuring speed, security, and scalability from day one.',
+    description: 'Clean, efficient code transforms designs into a fully functional WordPress website. I build with best practices, ensuring speed, security, and scalability from day one.',
   },
   {
     title: 'QA & Optimization',
@@ -51,7 +51,7 @@ const webDevelopmentSteps = [
   {
     title: 'Launch',
     icon: Rocket,
-    description: 'Your website goes live with full documentation and training. We provide ongoing support to ensure a smooth transition and continued success as your business grows.',
+    description: 'Your website goes live with full documentation and training. I provide ongoing support to ensure a smooth transition and continued success as your business grows.',
   },
 ];
 
@@ -132,7 +132,7 @@ export function DesignProcess() {
             </motion.div>
             
             <h1 className="font-['Orbitron'] text-5xl md:text-7xl font-bold text-[#E8F4FF] leading-tight">
-              How We Bring<br />Ideas to Life.
+              How I Bring<br />Ideas to Life.
             </h1>
             
             <p className="font-['IBM_Plex_Mono'] text-xl text-[#4A6B88] max-w-3xl mx-auto leading-relaxed">
@@ -230,10 +230,10 @@ export function DesignProcess() {
             className="text-center mb-16"
           >
             <h2 className="font-['Orbitron'] text-4xl md:text-5xl font-bold text-[#E8F4FF] mb-4">
-              What Makes Us Different
+              What Makes Me Different
             </h2>
             <p className="font-['IBM_Plex_Mono'] text-xl text-[#4A6B88] max-w-2xl mx-auto">
-              Technical excellence meets creative innovation in every project we deliver.
+              Technical excellence meets creative innovation in every project I deliver.
             </p>
           </motion.div>
 
