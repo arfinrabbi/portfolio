@@ -17,6 +17,7 @@ export function Navigation() {
     { name: 'Home', path: '/' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Process', path: '/process' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const handleNavClick = (path: string) => {
