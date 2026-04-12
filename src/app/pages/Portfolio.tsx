@@ -4,7 +4,7 @@ import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { BracketButton } from '../components/BracketButton';
 import { Link } from 'react-router';
-import Lemoniot from '../../Images/sample_mock.png';
+import Lemoniot from '../../Images/sample_mock.webp';
 
 const projects = [
   {
