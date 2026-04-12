@@ -6,6 +6,7 @@ import { BracketButton } from '../components/BracketButton';
 import { Link } from 'react-router';
 import Lemoniot from '../../Images/sample_mock.webp';
 import Logo_show from '../../Images/logo_showcase.webp';
+import Print_show from '../../Images/Print_showcase.webp';
 
 const projects = [
   {
@@ -29,7 +30,7 @@ const projects = [
     title: 'Print Design Portfolio',
     category: 'PRINT DESIGN',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1754681920848-d20733e4ef23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFwaGljJTIwZGVzaWduJTIwZmx5ZXIlMjBtb2NrdXB8ZW58MXx8fHwxNzc1Mzk5OTEzfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: Print_show,
     description: 'Flyers, brochures, and marketing materials with impact'
   },
   {
