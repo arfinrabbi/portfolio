@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 import Lemoniot from '../../Images/sample_mock.webp';
 import Logo_show from '../../Images/logo_showcase.webp';
 import Print_show from '../../Images/Print_showcase.webp';
-import website_mock from '../../Images/website_mock.webpp';
+import website_mock from '../../Images/website_mock.webp';
 
 const projects = [
   {
