@@ -7,6 +7,7 @@ import { Link } from 'react-router';
 import Lemoniot from '../../Images/sample_mock.webp';
 import Logo_show from '../../Images/logo_showcase.webp';
 import Print_show from '../../Images/Print_showcase.webp';
+import website_mock from '../../Images/website_mock.webpp';
 
 const projects = [
   {
@@ -38,7 +39,7 @@ const projects = [
     title: 'WordPress Site Design',
     category: 'WEB DESIGN',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWJzaXRlJTIwZGVzaWduJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3NTM5OTkxNHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: website_mock,
     description: 'Modern, responsive website interfaces for diverse clients'
   },
   {
