@@ -314,7 +314,7 @@ export function DesignProcess() {
             </p>
             
             <motion.a
-              href="/#contact"
+              href="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block px-10 py-5 bg-[#00C8FF] text-[#050A12] font-['Rajdhani'] font-bold text-lg uppercase tracking-wider shadow-2xl shadow-[#00C8FF]/30 hover:shadow-[0_0_40px_rgba(0,200,255,0.5)] transition-all duration-300 relative group"
